@@ -1,0 +1,36 @@
+public class MAINN {
+
+	static int pronum(int []v,int a, int b) {
+		 
+		 int aa=0;
+		 
+		 
+		 for(int i=0;i<a;i++) {
+			 if(v[i]==b) {
+				 aa=i;
+				 i=a;
+		   }else {
+			   aa=-100;
+		   }
+		}	 
+		 
+		return aa;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int [] vet = new int [10];
+		
+		 
+		 for(int i=0;i<10;i++) {
+			 vet[i]=i;
+		 }
+		int qq=sc.nextInt();
+		int R=pronum(vet,10,qq);
+		
+	  
+	  System.out.println("POSIÇÃO="+R);
+	  }
+		
+		
+	}
