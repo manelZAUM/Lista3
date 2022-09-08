@@ -1,0 +1,45 @@
+public class MAINN {
+	
+
+	  static int  cap(int []vet,int a,int b) {
+		int numm;
+		 for(int i=0;i<a;i++) {
+			 if(b==vet[i]) {
+				 numm=vet[i];
+				 i=a;
+				 return numm;
+			 }
+			 
+		 }
+		return -111;
+		
+	}
+	
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int i;
+		boolean situ=true;
+		i=sc.nextInt();
+		System.out.println("QUAL O NUMERO ?");
+		int num=sc.nextInt();
+		int [] vet = new int [i];
+		
+		for(int j=0;j<i;j++) {
+			vet[j]=j+1;
+		}
+		
+		int valor=cap(vet,i,num);
+		    if(valor==-111) {
+		    	situ=false;
+		    }
+		    
+		    if(situ==true) {
+             System.out.println("POSICAO DO NUMERO: "+valor);
+		    }else {
+		    	System.out.println("NUMERO NAO ENCONTRADO");
+		    }
+		    
+		
+	}
+}
