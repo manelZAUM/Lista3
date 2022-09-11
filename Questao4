@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	static int soma(int vv[],int i) {
+		int somm=0;
+		for(int j=0;j<i;j++) {
+			somm+=vv[j];
+		}
+		return somm;
+	}
+
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int i=sc.nextInt();
+	    int vetor[] = new int[i];
+	    int resultado;
+	    
+	    for(int j=0;j<i;j++) {
+	    	
+	    	vetor[j]=i;
+	    }
+
+	    resultado=soma(vetor,i);
+	    System.out.println(resultado);
+	   
+	}
+
+}
