@@ -1,0 +1,42 @@
+public class MAIN {
+	
+	static int [] ord(int v1[],int v2[]){
+		
+        int result[]=new int[v1.length + v2.length];
+        
+        
+        for(int i=0;i<v1.length;i++) {
+        	result[i]=v1[i];
+        }
+        
+        for(int i=0;i<v2.length;i++) {
+        	result[v1.length+i]=v2[i];
+        }
+		
+		return result;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		int vetA[]=new int[sc.nextInt()];
+		int vetB[]=new int[sc.nextInt()];
+		
+		
+		for(int i=0;i<vetA.length;i++) {
+			vetA[i]=i;
+		}
+		
+		
+		for(int j=0;j<vetB.length;j++) {
+			vetB[j]=j;
+		}
+		
+		int result[]=new int[vetA.length+vetB.length];
+		result =ord(vetA,vetB);
+		
+		for(int i=0;i<result.length;i++) {
+			System.out.println(result[i]);
+		}
+
+	}
