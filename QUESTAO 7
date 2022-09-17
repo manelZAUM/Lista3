@@ -1,0 +1,53 @@
+public class Main {
+	
+    static  int[] org(int receb[]){
+ 	   
+    	int mand[]=new int[receb.length];
+    	
+ 	   for(int i=0;i<receb.length;i++) {
+ 		   mand[i]=receb[i];
+ 	   }
+ 	   
+ 	   return mand;
+ 	   
+    }
+
+	public static void main(String[] args) {
+		//fazendo vet 1 e declarando o tamanho
+		Scanner sc=new Scanner(System.in);
+		int tamanho=sc.nextInt();
+		int [] a = new int[tamanho];
+		Random numeros = new Random();
+		for (int i=0; i < a.length; i++) {
+			a[i]=numeros.nextInt();
+			System.out.println("a[" + i + "]=" + a[i]);
+		}
+		
+		System.out.println();
+		//fazendo vet 2
+		int [] b = new int[tamanho];
+		for (int i=0; i < b.length; i++) {
+			b[i]=numeros.nextInt();
+			System.out.println("b[" + i + "]=" + b[i]);
+		}
+		
+		int vett[]=a.clone();
+		
+		a=org(b);
+		b=org(vett);
+		
+		//DEPOIS
+		System.out.println("DEPOIS");
+		System.out.println();
+		for (int i=0; i < a.length; i++) {
+			System.out.println("a[" + i + "]=" + a[i]);
+			
+		}
+		System.out.println();
+		for (int i=0; i < b.length; i++) {
+			System.out.println("b[" + i + "]=" + b[i]);
+			
+		}
+
+}
+}
